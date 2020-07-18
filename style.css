@@ -6,6 +6,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
     text-decoration: none;
+    color: white;
 
 }
 
@@ -19,6 +20,7 @@ a{
     top: 13px;
     right: 13px;
     display: none;
+    cursor: pointer;
 }
 
 #hamburgerBtn span {
@@ -28,6 +30,8 @@ a{
 .content {
     min-height: 100vh;
     margin-left: 272px;
+    padding: 30px;
+    background-color: rgba(0,0,0,.9);
 }
 
 .navbar {
@@ -50,6 +54,10 @@ a{
     margin-bottom: 30px;
 }
 
+.nav-brand p {
+    color: black
+}
+
 .navbar ul {
     padding: 0;
 }
@@ -60,9 +68,9 @@ a{
 
 .navbar li a {
     display: block;
-    color: rgba(0, 0, 0, .7);
     transition: .5s;
     cursor: pointer;
+    color: rgba(0, 0, 0, .7);
 }
 
 .navbar li a:hover {
@@ -74,6 +82,28 @@ a{
     border-radius: 50%;
     margin-bottom: 10px;
     border: 2px solid gray;
+}
+
+
+#about {
+    padding: 50px;
+}
+
+#name {
+    text-align: center;
+}
+
+#nameTitle {
+    font-family: 'Anton', sans-serif;
+    font-size: 80px;
+}
+
+#nameTitle span {
+    font-size: 80px;
+}
+
+#textWithColor {
+    color: rgba(5, 237, 191, .9);
 }
 
 @media only screen and (max-width: 800px) { 

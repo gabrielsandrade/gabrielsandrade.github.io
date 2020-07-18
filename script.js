@@ -1,5 +1,6 @@
 const hamburgerBtn = document.querySelector("#hamburgerBtn");
 const sidebar = document.querySelector(".navbar");
+const sidebarLinks = sidebar.querySelectorAll('a');
 
 hamburgerBtn.addEventListener('click', ()=> {
     let active = false;
@@ -10,4 +11,10 @@ hamburgerBtn.addEventListener('click', ()=> {
     });
     (active == true) ? sidebar.classList.remove("activeMenu") : sidebar.classList.add("activeMenu");
     active != active;
+})
+
+sidebarLinks.forEach(link => {
+    link.addEventListener('click' , () => {
+        sidebar.classList.remove("activeMenu")
+    })
 })
