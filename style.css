@@ -1,3 +1,5 @@
+
+
 * {
     scroll-behavior: smooth;
     margin: 0;
@@ -74,6 +76,7 @@ a{
 }
 
 .navbar li a:hover {
+    background-color: rgba(0, 0, 0, .7);
     color: white;
 }
 
@@ -89,8 +92,18 @@ a{
     padding: 50px;
 }
 
+#about-content {
+    padding-top: 80px;
+}
+
+#about-text {
+    text-align: justify;
+    line-height: 25px;
+}
+
 #name {
     text-align: center;
+    margin-bottom: 80px;
 }
 
 #nameTitle {
@@ -100,6 +113,27 @@ a{
 
 #nameTitle span {
     font-size: 80px;
+}
+
+.fa {
+    font-size: 45px;
+    color: rgba(5, 237, 191, .9);
+}
+
+.fa:hover {
+    color: rgba(255, 255, 255, .7);
+}
+
+.skill {
+    display: inline;
+}
+
+.skill i{
+    font-size: 40px;
+}
+
+.skill i:hover{
+    color: rgba(5, 237, 191, .9);
 }
 
 #textWithColor {
@@ -126,6 +160,10 @@ a{
 
     .content {
         margin-left: 0;
+    }
+
+    #about {
+        padding: 20px
     }
     
     #hamburgerBtn {
