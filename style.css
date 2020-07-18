@@ -46,6 +46,10 @@ a{
     box-shadow: 0px 0 2px black;
 }
 
+.nav-brand {
+    margin-bottom: 30px;
+}
+
 .navbar ul {
     padding: 0;
 }
@@ -75,10 +79,23 @@ a{
 @media only screen and (max-width: 800px) { 
     .navbar {
         width: 100vw;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: .5s linear;
+    }
+
+    .activeMenu {
+        width: 100vw;
+        transform: translateX(0%);
+        opacity: 1;
     }
 
     #profile-picture {
-        width: 280px;
+        width: 240px;
+    }
+
+    .content {
+        margin-left: 0;
     }
     
     #hamburgerBtn {
