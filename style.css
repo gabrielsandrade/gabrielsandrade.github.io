@@ -88,11 +88,11 @@ a{
 }
 
 
-#about {
+.content {
     padding: 50px;
 }
 
-#about-content {
+.content-box {
     padding-top: 80px;
 }
 
@@ -101,17 +101,17 @@ a{
     line-height: 25px;
 }
 
-#name {
+#titleBox {
     text-align: center;
     margin-bottom: 80px;
 }
 
-#nameTitle {
+#title {
     font-family: 'Anton', sans-serif;
     font-size: 80px;
 }
 
-#nameTitle span {
+#title span {
     font-size: 80px;
 }
 
@@ -124,12 +124,18 @@ a{
     color: rgba(255, 255, 255, .7);
 }
 
+#skills .content-box ul {
+    text-align: center;
+    padding: 0;
+}
+
 .skill {
     display: inline;
 }
 
 .skill i{
     font-size: 40px;
+    transition: .5s;
 }
 
 .skill i:hover{
@@ -162,11 +168,18 @@ a{
         margin-left: 0;
     }
 
-    #about {
+    .content {
         padding: 20px
     }
     
     #hamburgerBtn {
         display: inline-block;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    #nameTitle, #nameTitle #textWithColor {
+        font-size: 60px;
     }
 }
