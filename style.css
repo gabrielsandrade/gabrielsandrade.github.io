@@ -9,7 +9,10 @@
     font-size: 17px;
     text-decoration: none;
     color: white;
+}
 
+ul {
+    padding: 0;
 }
 
 a{
@@ -93,7 +96,7 @@ a{
 }
 
 .content-box {
-    padding-top: 80px;
+    padding-top: 40px;
 }
 
 #about-text {
@@ -106,13 +109,34 @@ a{
     margin-bottom: 80px;
 }
 
-#title {
+.title {
     font-family: 'Anton', sans-serif;
     font-size: 80px;
 }
 
-#title span {
+.title span {
     font-size: 80px;
+}
+
+.academic-list {
+    margin-top: 100px;
+    text-align: justify;
+}
+
+.academic-skill {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.institution p{
+    font-size: large;
+    font-weight: 700;
+    text-decoration: solid;
+}
+
+.academic-situation p{
+    color: rgba(5, 237, 191, .9);
 }
 
 .fa {
@@ -127,6 +151,7 @@ a{
 #skills .content-box ul {
     text-align: center;
     padding: 0;
+    margin-top: 200px;
 }
 
 .skill {
@@ -175,11 +200,17 @@ a{
     #hamburgerBtn {
         display: inline-block;
     }
+    #nameTitle, #nameTitle #textWithColor {
+        font-size: 60px;
+    }
+    .title {
+        font-size: 60px;
+    }
 }
 
 
-@media only screen and (max-width: 800px) {
-    #nameTitle, #nameTitle #textWithColor {
-        font-size: 60px;
+@media only screen and (max-width: 1000px) {
+    .academic-skill{
+        flex-direction: column;
     }
 }
