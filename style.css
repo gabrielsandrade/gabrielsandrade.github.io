@@ -17,7 +17,6 @@ ul {
 
 a{
     text-decoration: none;
-    color: black;
 }
 
 #hamburgerBtn {
@@ -200,10 +199,7 @@ a{
     #hamburgerBtn {
         display: inline-block;
     }
-    #nameTitle, #nameTitle #textWithColor {
-        font-size: 60px;
-    }
-    .title {
+    .title, .title #textWithColor {
         font-size: 60px;
     }
 }
