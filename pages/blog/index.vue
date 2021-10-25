@@ -1,27 +1,12 @@
 <template>
-  <div>
+  <div class="main">
     <h1 class="text-center mt-8">Blog</h1>
-    <v-card
+    <PostCard
       v-for="article in articles"
-      :key="article.path"
-      class="mb-3"
-      :to="'blog/' + article.path.split('/articles/')[1]"
-      elevation="2"
-      :hover="true"
-      outlined
-    >
-      <v-card-title>
-        {{ article.title }}
-      </v-card-title>
-      <v-card-subtitle>
-        {{ article.description }}
-      </v-card-subtitle>
-      <div class="d-flex footer ml-4 grey--text">
-        <p v-if="article.author" class="mr-4">{{ article.author }}</p>
-        <p class="">{{ formatDate(article.createdAt) }}</p>
-      </div>
-    </v-card>
-    <div class="d-flex justify-space-between my-4">
+      :article="article"
+      :key="article.createAt"
+    />
+    <div class="d-flex justify-space-between mt-8">
       <v-btn :disabled="offset <= 0" @click="previousPage"> &lt; </v-btn>
       <v-btn :disabled="offset >= totalArticles - 5" @click="nextPage">
         &gt;
@@ -31,9 +16,13 @@
 </template>
 
 <script>
+import PostCard from "@/components/PostCard";
 export default {
   data: function () {
     return {};
+  },
+  components: {
+    PostCard,
   },
   async asyncData({ $content, params, store }) {
     const articles = await $content("articles")
@@ -50,9 +39,6 @@ export default {
     },
   },
   methods: {
-    formatDate(date) {
-      return date.split("T")[0];
-    },
     previousPage() {
       this.$store.commit("decrement");
       this.refreshNuxt();
@@ -67,3 +53,11 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.main {
+  max-width: 700px;
+  margin: auto;
+  width: 100%;
+}
+</style>

@@ -35,7 +35,7 @@
         color="info"
       />
       <v-spacer />
-      <v-app-nav-icon>
+      <div>
         <v-layout column align-center>
           <v-switch
             v-model="$vuetify.theme.dark"
@@ -49,7 +49,7 @@
           >
           </v-switch>
         </v-layout>
-      </v-app-nav-icon>
+      </div>
     </v-app-bar>
     <v-main>
       <v-container>
@@ -73,8 +73,12 @@ export default {
         this.$vuetify.theme.dark = true;
         break;
 
-      default:
+      case "light":
         this.$vuetify.theme.dark = false;
+        break;
+
+      default:
+        this.$vuetify.theme.dark = true;
         break;
     }
   },
