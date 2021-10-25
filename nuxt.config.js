@@ -2,7 +2,7 @@ import colors from 'vuetify/es5/util/colors'
 
 export default {
   // Github Pages deploy configuration
-  mode: 'static',
+  target: 'static',
   router: {
     base: '/gabrielsandrade/'
   },
@@ -13,7 +13,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - personal-page',
-    title: 'personal-page',
+    title: 'Gabriel Andrade',
     htmlAttrs: {
       lang: 'en'
     },
