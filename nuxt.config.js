@@ -4,7 +4,7 @@ export default {
   // Github Pages deploy configuration
   target: 'static',
   router: {
-    base: '/gabrielsandrade/'
+    base: '/'
   },
 
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
