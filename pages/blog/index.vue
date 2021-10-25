@@ -1,17 +1,14 @@
 <template>
   <div>
     <h1 class="text-center mt-8">Blog</h1>
-    <div class="d-flex justify-space-between my-4">
-      <v-btn :disabled="offset <= 0" @click="previousPage"> Pev </v-btn>
-      <v-btn :disabled="offset >= totalArticles - 5" @click="nextPage">
-        Next
-      </v-btn>
-    </div>
     <v-card
       v-for="article in articles"
       :key="article.path"
       class="mb-3"
-      @click="$router.push('blog/' + article.path.split('/articles/')[1])"
+      :to="'blog/' + article.path.split('/articles/')[1]"
+      elevation="2"
+      :hover="true"
+      outlined
     >
       <v-card-title>
         {{ article.title }}
@@ -24,6 +21,12 @@
         <p class="">{{ formatDate(article.createdAt) }}</p>
       </div>
     </v-card>
+    <div class="d-flex justify-space-between my-4">
+      <v-btn :disabled="offset <= 0" @click="previousPage"> &lt; </v-btn>
+      <v-btn :disabled="offset >= totalArticles - 5" @click="nextPage">
+        &gt;
+      </v-btn>
+    </div>
   </div>
 </template>
 
