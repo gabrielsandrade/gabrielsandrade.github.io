@@ -1,6 +1,6 @@
 <template>
   <article class="main">
-    <h1 class="text-center font-title mt-16 article-title">
+    <h1 class="text-center font-title mt-2 article-title">
       {{ article.title }}
     </h1>
     <blockquote class="text--disabled quote">
@@ -42,5 +42,23 @@ export default {
 
 .quote {
   margin-left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    max-width: 700px;
+    width: 95%;
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+    }
+    p {
+      font-size: 18px !important;
+    }
+  }
+  .articles {
+    max-width: 700px;
+    width: 95%;
+  }
 }
 </style>

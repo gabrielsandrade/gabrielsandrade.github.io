@@ -119,6 +119,10 @@ export default {
 };
 </script>
 <style scoped>
+body {
+  background-color: #fff;
+}
+
 .title {
   cursor: pointer;
 }

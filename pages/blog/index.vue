@@ -60,4 +60,18 @@ export default {
   margin: auto;
   width: 100%;
 }
+
+@media screen and (max-width: 600px) {
+  .main {
+    max-width: 700px;
+    width: 95%;
+    p {
+      font-size: 18px !important;
+    }
+  }
+  .articles {
+    max-width: 700px;
+    width: 95%;
+  }
+}
 </style>

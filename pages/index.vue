@@ -1,6 +1,6 @@
 <template>
-  <v-row justify="center" align="center" class="main">
-    <div class="main-content mt-12">
+  <div justify="center" align="center" class="main">
+    <div class="main-content mt-2">
       <!-- <h1>&ltGabriel Andrade /></h1> -->
       <h2>Olá !</h2>
       <p class="">
@@ -29,7 +29,7 @@
         >
       </div>
     </div>
-  </v-row>
+  </div>
 </template>
 <script>
 import PostCard from "@/components/PostCard";
@@ -61,5 +61,15 @@ export default {
 .articles {
   max-width: 700px;
   width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .main-content {
+    max-width: 700px;
+    width: 95%;
+    p {
+      font-size: 18px !important;
+    }
+  }
 }
 </style>
