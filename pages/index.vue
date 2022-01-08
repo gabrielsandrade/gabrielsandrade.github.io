@@ -3,7 +3,7 @@
     <div class="main-content mt-2">
       <!-- <h1>&ltGabriel Andrade /></h1> -->
       <h2>Olá !</h2>
-      <p class="">
+      <p class="text-left">
         Meu nome é Gabriel Andrade e moro em Salvador/BA. Há alguns anos eu
         iniciei a graduação em Matemática mas a paixão por tecnologia me fez
         migrar para a Engenharia de Computação que atualmente curso o oitavo
