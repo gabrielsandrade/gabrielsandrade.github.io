@@ -1,18 +1,30 @@
 <template>
   <div justify="center" align="center" class="main">
     <div class="main-content mt-2">
-      <!-- <h1>&ltGabriel Andrade /></h1> -->
-      <h2>Olá !</h2>
-      <p class="text-left">
-        Meu nome é Gabriel Andrade e moro em Salvador/BA. Há alguns anos eu
-        iniciei a graduação em Matemática mas a paixão por tecnologia me fez
-        migrar para a Engenharia de Computação que atualmente curso o oitavo
-        semestre na UFBA (Universidade Federal da Bahia) e há 1 ano trabalho
-        desenvolvendo aplicações web com VueJs e PHP (Laravel).
-      </p>
+      <h2 class="title text-left">&ltGabriel Andrade /></h2>
+      <div class="intro text-justify my-8">
+        <v-img
+          class="profile-picture pa-2"
+          max-height="800"
+          max-width="800"
+          src="profile.jpg"
+        ></v-img>
+        <p>
+          Hi, I am Gabriel! I am Brazilian, 24 years old, Computer Engineering
+          student at UFBA (Federal University of Bahia), interested in math,
+          engineering, data science, and web development.
+        </p>
+        <p>
+          I have worked with Professor Leonardo F. Nascimento at Digital
+          Humanities Laboratory (LABHD - UFBA) developing web scraping scrpts
+          with Python to collect online data from many different sources and
+          since 2020 I am working with web development using mostly PHP /
+          Laravel and Vue.Js
+        </p>
+      </div>
     </div>
     <div class="my-6 articles">
-      <h3 class="my-4">Últimas postagens</h3>
+      <h3 class="my-4">Last posts</h3>
       <PostCard
         v-for="article in articles"
         :article="article"
@@ -25,7 +37,7 @@
           outlined
           @click="$router.push('blog')"
           rounded
-          >Ver mais posts</v-btn
+          >Read more</v-btn
         >
       </div>
     </div>
@@ -51,11 +63,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+p {
+  font-size: 1.1rem !important;
+  font-weight: 350;
+}
 .main-content {
   max-width: 700px;
   width: 100%;
-  p {
-    font-size: 22px !important;
+  .title {
+    font-size: 34px !important;
+  }
+  .intro {
+    display: block;
+    max-width: 100%;
+    ::first-letter {
+      margin-left: 25px;
+    }
+  }
+  .profile-picture {
+    float: right;
+    width: 30%;
+    height: auto;
+    margin-left: 20px;
+    border-radius: 2%;
+    box-shadow: rgba(6, 37, 46, 15) 2px 2px 10px;
   }
 }
 .articles {
@@ -68,8 +99,19 @@ export default {
     max-width: 700px;
     width: 95%;
     p {
-      font-size: 18px !important;
+      font-size: 1rem !important;
     }
+    .intro {
+      position: relative;
+    }
+  }
+  .profile-picture {
+    position: relative;
+    top: 0;
+    display: inline;
+    width: 85vw !important;
+    margin-bottom: 20px;
+    height: auto;
   }
 }
 </style>
