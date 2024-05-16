@@ -113,7 +113,7 @@ export default {
         },
       ],
       miniVariant: false,
-      title: "<Gabriel Andrade/>",
+      title: "<GabrielAndrade />",
     };
   },
 };
