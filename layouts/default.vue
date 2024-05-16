@@ -4,7 +4,7 @@
       v-model="drawer"
       :mini-variant="miniVariant"
       :clipped="clipped"
-      :expand-on-hover="true"
+      :expand-on-hover="false"
       fixed
       app
     >
@@ -37,17 +37,9 @@
       <v-spacer />
       <div>
         <v-layout column align-center>
-          <v-switch
-            v-model="$vuetify.theme.dark"
-            @click="switchTheme"
-            inset
-            :hide-details="true"
-            :append-icon="
-              $vuetify.theme.dark ? 'mdi-lightbulb' : 'mdi-lightbulb-on'
-            "
-            color="info"
-          >
-          </v-switch>
+          <v-icon
+          color="info"
+            @click="switchTheme">{{ $vuetify.theme.dark ? 'mdi-lightbulb' : 'mdi-lightbulb-on' }}</v-icon>
         </v-layout>
       </div>
     </v-app-bar>
@@ -84,10 +76,12 @@ export default {
   },
   methods: {
     switchTheme() {
+      console.log('--', this.$vuetify.theme.isDark);
       StorageService.setItem(
         "theme",
-        this.$vuetify.theme.dark ? "dark" : "light"
+        this.$vuetify.theme.isDark ? "light" : "dark"
       );
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     },
   },
   data() {

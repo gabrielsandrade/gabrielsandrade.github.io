@@ -8,18 +8,24 @@
       </div>
       <div class="intro text-justify my-8">
         <v-img class="profile-picture pa-2" max-height="800" max-width="800" src="profile.jpg"></v-img>
+        <h3 class="mx-0">Welcome to my corner of the web</h3>
         <p>
-          Hi, I am Gabriel! I am Brazilian, 26 years old, Computer Engineering
+          Come on in, pull up a chair, grab a coffee and let's chat about technology,
+          life, and everything in between.
+        </p>
+        <h3>Who am I?</h3>
+        <p>
+          I'm just a "regular guy of Bahia", I am a Computer Engineering
           student at UFBA (Federal University of Bahia), interested in math,
-          engineering, data science, and web development.
+          engineering, data science, web development, reading, sci-fi and many other things.
         </p>
+        <h3>Turning off the computer</h3>
         <p>
-          I have worked with Professor Leonardo F. Nascimento at Digital
-          Humanities Laboratory (LABHD - UFBA) developing web scraping scrpts
-          with Python to collect online data from many different sources and
-          since 2020 I am working with web development using mostly PHP /
-          Laravel and Vue.Js
+          I work from home so I'm always around, but when I'm not working, you can find me
+          reading a book, specially sci-fi, fantasy or investigative books, or playing video games.
+          I'm also a big fan of music, so I'm always listening to something.
         </p>
+        <p>Thanks for stopping by, amigo! Can't wait to get to know you better.</p>
       </div>
     </div>
     <div class="my-6 articles">
@@ -45,7 +51,7 @@ export default {
   async mounted() {
     const title = document.getElementsByClassName("title__typing-sentence")[0];
     const textEnd = " Andrade />";
-    while(true){
+    while (true) {
       await this.typeSentence(textEnd, title);
       await this.waitForMs(6000);
       await this.deleteSentence(title);
@@ -88,8 +94,8 @@ export default {
 
 <style lang="scss" scoped>
 p {
-  font-size: 1.1rem !important;
-  font-weight: 350;
+  font-size: 1rem !important;
+  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 .main-content {
@@ -138,16 +144,16 @@ p {
     display: block;
     max-width: 100%;
 
-    ::first-letter {
+    p::first-letter {
       margin-left: 25px;
     }
   }
 
   .profile-picture {
-    float: right;
-    width: 30%;
+    float: left;
+    width: 20%;
     height: auto;
-    margin-left: 20px;
+    margin-right: 20px;
     border-radius: 100%;
     box-shadow: rgba(6, 37, 46, 15) 2px 2px 10px;
   }
@@ -177,7 +183,9 @@ p {
     top: 0;
     display: inline;
     width: 85vw !important;
+    margin: auto;
     margin-bottom: 20px;
+    margin-left: 10px;
     height: auto;
   }
 }
