@@ -2,7 +2,7 @@
   <div justify="center" align="center" class="main">
     <div class="main-content mt-2">
       <div class="title d-flex">
-        <h2 class="title__fixed_sentence">&ltGabriel</h2>
+        <h2 class="title__fixed_sentence">Gabriel</h2>
         <h2 class="title__typing-sentence"></h2>
         <p class="title__input-cursor"></p>
       </div>
@@ -50,7 +50,7 @@ export default {
   },
   async mounted() {
     const title = document.getElementsByClassName("title__typing-sentence")[0];
-    const textEnd = " Andrade />";
+    const textEnd = " Andrade";
     while (true) {
       await this.typeSentence(textEnd, title);
       await this.waitForMs(6000);
