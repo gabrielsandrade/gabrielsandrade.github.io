@@ -36,8 +36,8 @@ export default {
   }
 }
 .nuxt-content p {
-  font-size: 1.4rem;
-  font-weight: 300;
+  font-size: 1rem !important;
+  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 .quote {
