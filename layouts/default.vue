@@ -1,48 +1,8 @@
 <template>
   <v-app light>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      :expand-on-hover="false"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          color="info"
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-app-bar :clipped-left="clipped" fixed app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" color="info" />
-      <v-toolbar-title
-        class="title info--text"
-        v-text="title"
-        @click="$router.push('/')"
-        color="info"
-      />
-      <v-spacer />
-      <div>
-        <v-layout column align-center>
-          <v-icon
-          color="info"
-            @click="switchTheme">{{ $vuetify.theme.dark ? 'mdi-lightbulb' : 'mdi-lightbulb-on' }}</v-icon>
-        </v-layout>
-      </div>
-    </v-app-bar>
+    <div class="mt-2 ml-2">
+      <v-btn v-if="$route.path != '/'" prepend-icon="mdi-apps" outlined class="back-btn" small @click="$router.go(-1)">Back</v-btn>
+    </div>
     <v-main>
       <v-container>
         <Nuxt />
@@ -87,7 +47,7 @@ export default {
   data() {
     return {
       clipped: true,
-      drawer: false,
+      drawer: true,
       fixed: false,
       items: [
         {

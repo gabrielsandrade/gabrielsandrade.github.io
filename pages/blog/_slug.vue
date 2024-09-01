@@ -30,11 +30,13 @@ export default {
   max-width: 700px;
   margin: auto;
   width: 100%;
+
   h1 {
     font-size: 2.4rem;
     font-weight: 500;
   }
 }
+
 .nuxt-content p {
   font-size: 1rem !important;
   font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -46,16 +48,22 @@ export default {
 
 @media screen and (max-width: 600px) {
   .main {
+    .back-btn {
+    }
+
     max-width: 700px;
     width: 95%;
+
     h1 {
       font-size: 2.2rem;
       font-weight: 500;
     }
+
     p {
       font-size: 18px !important;
     }
   }
+
   .articles {
     max-width: 700px;
     width: 95%;

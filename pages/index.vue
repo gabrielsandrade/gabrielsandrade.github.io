@@ -3,11 +3,11 @@
     <div class="main-content mt-2">
       <div class="title d-flex">
         <h2 class="title__fixed_sentence">Gabriel</h2>
-        <h2 class="title__typing-sentence"></h2>
+        <h2 class="title__typing-sentence ml-2"></h2>
         <p class="title__input-cursor"></p>
       </div>
       <div class="intro text-justify my-8">
-        <v-img class="profile-picture pa-2" max-height="800" max-width="800" src="profile.jpg"></v-img>
+        <v-img class="profile-picture pa-2" max-height="800" max-width="800" src="developer.png"></v-img>
         <h3 class="mx-0">Welcome to my corner of the web</h3>
         <p>
           Come on in, pull up a chair, grab a coffee and let's chat about technology,
@@ -137,7 +137,7 @@ p {
     width: 2px;
     height: 30px;
     background-color: #26a69a;
-    margin-left: 8px;
+    margin-left: 0px;
   }
 
   .intro {
@@ -154,8 +154,6 @@ p {
     width: 20%;
     height: auto;
     margin-right: 20px;
-    border-radius: 100%;
-    box-shadow: rgba(6, 37, 46, 15) 2px 2px 10px;
   }
 }
 

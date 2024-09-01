@@ -2,7 +2,7 @@
   <v-card
     class="mb-3"
     :to="'blog/' + article.path.split('/articles/')[1]"
-    elevation="12"
+    elevation="0"
     shaped
     outlined
   >
