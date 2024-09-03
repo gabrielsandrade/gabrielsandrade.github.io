@@ -10,22 +10,15 @@
         <v-img class="profile-picture pa-2" max-height="800" max-width="800" src="developer.png"></v-img>
         <h3 class="mx-0">Welcome to my corner of the web</h3>
         <p>
-          Come on in, pull up a chair, grab a coffee and let's chat about technology,
-          life, and everything in between.
+          Olá, me chamo Gabriel, sou estudante de Engenharia de Computação na UFBA (Universidade Federal da Bahia) e trabalho como desenvolvedor de software. Minha jornada na
+          tecnologia me levou a explorar diversas linguagens e frameworks, incluindo PHP com Laravel, Node.js, Vue,
+          React, Python e Svelte. Adoro criar soluções que facilitam a vida das pessoas e estou sempre em busca de novos
+          desafios e aprendizados.
         </p>
-        <h3>Who am I?</h3>
-        <p>
-          I'm just a "regular guy of Bahia", I am a Computer Engineering
-          student at UFBA (Federal University of Bahia), interested in math,
-          engineering, data science, web development, reading, sci-fi and many other things.
-        </p>
-        <h3>Turning off the computer</h3>
-        <p>
-          I work from home so I'm always around, but when I'm not working, you can find me
-          reading a book, specially sci-fi, fantasy or investigative books, or playing video games.
-          I'm also a big fan of music, so I'm always listening to something.
-        </p>
-        <p>Thanks for stopping by, amigo! Can't wait to get to know you better.</p>
+        <p>Além do meu amor pela programação, adoro filmes e livros, especialmente aqueles
+          que envolvem suspense, investigação, ficção científica e fantasia. Quando não estou codando ou lendo, você
+          provavelmente me encontrará jogando video games ou ouvindo música, que são outras das minhas grandes paixões.
+          Fique à vontade para explorar o meu site e saber mais sobre meus projetos e interesses! </p>
       </div>
     </div>
     <div class="my-6 articles">
@@ -183,7 +176,6 @@ p {
     width: 85vw !important;
     margin: auto;
     margin-bottom: 20px;
-    margin-left: 10px;
     height: auto;
   }
 }
